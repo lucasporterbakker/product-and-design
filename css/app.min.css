@@ -2076,7 +2076,7 @@ button {
 }
 @media only screen and (max-width: 767px) {
   .main__images {
-    top: 300px;
+    top: 50px;
     width: 810px;
   }
 }
