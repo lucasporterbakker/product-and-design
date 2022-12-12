@@ -1,0 +1,40 @@
+.values
+    &__container
+        +m
+            padding: 0 40px
+    &__row
+        display: flex
+        margin: 0 -40px
+        +m
+            display: block
+            margin: 0
+    &__col
+        flex: 0 0 calc(50% - 80px)
+        width: calc(50% - 80px)
+        margin: 0 40px
+        +m
+            width: 100%
+            margin: 0
+        &:nth-child(1)
+            +m
+                margin-bottom: 80px
+    &__subtitle
+        margin-bottom: 24px
+        color: $n4
+    &__title
+        margin-bottom: 32px
+    &__content
+        margin-bottom: 56px
+        +body1
+        color: $n3
+    .card
+        padding: 24px
+        box-shadow: none
+        &:not(:last-child)
+            margin-bottom: 32px
+    .card__inner
+        align-items: flex-start
+    &__status
+        margin-bottom: 30px
+    &__info
+        max-width: 300px

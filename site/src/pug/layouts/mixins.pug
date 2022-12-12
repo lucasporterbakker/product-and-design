@@ -1,0 +1,33 @@
+mixin i(name)
+	svg.icon(class='icon-' + name)
+		use(xlink:href='#icon-' + name)
+
+mixin socials(classSocials)
+	// socials
+	.socials(class=classSocials)
+		a.socials__link(href="https://ui8.net/" target="_blank")
+			+i('discord')
+		a.socials__link(href="https://twitter.com/ui8" target="_blank")
+			+i('twitter')
+		a.socials__link(href="https://www.instagram.com/ui8net/" target="_blank")
+			+i('instagram')
+		a.socials__link(href="https://ui8.net/" target="_blank")
+			+i('telegram')
+		a.socials__link(href="https://www.facebook.com/ui8.net/" target="_blank")
+			+i('facebook')
+
+mixin scroll(title, anchor, classScroll)
+	// scroll
+	a.scroll.js-scroll(class=classScroll href='#' + anchor)
+		span.scroll__mouse
+		=title
+
+mixin cardStyle(color, small)
+	.card__background
+	.card__square(style='background:' + color)
+	svg.card__corner(preserveAspectRatio="none" width="77" height="124" viewBox="0 0 77 124")
+		if small
+			path(d="M35.453 9.373C29.455 3.371 21.32 0 12.839 0H.116C.113 0 .127 0 .16 0v100h76.956V64.314a32.01 32.01 0 0 0-9.368-22.627L35.453 9.373z")
+		else
+			path(d="M77 124V78.231c0-8.489-3.371-16.629-9.373-22.632L21.388 9.35A32 32 0 0 0 0 0v124h77")
+

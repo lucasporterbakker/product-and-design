@@ -1,0 +1,185 @@
+---
+title: Onix
+headerLinkTechnology: active
+---
+extends layouts/layout
+block content
+	// technology
+	.section.technology
+		.technology__container.container
+			.technology__wrap
+				.technology__stage technology
+				h1.technology__title.h1 Built by developers, for developers.
+				.technology__info Onix delivers tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain
+		.technology__images
+			.technology__image
+				img(src="img/lines-3.svg" alt="")
+			.technology__image.js-parallax(data-speed="1.6")
+				img(src="img/figures/figure-11.png" alt="")
+			.technology__image.js-parallax(data-speed="1.9")
+				img(src="img/figures/figure-12.png" alt="")
+			.technology__image.js-parallax(data-speed="1.6")
+				img(src="img/figures/figure-13.png" alt="")
+			.technology__image.js-parallax(data-speed="1.8")
+				img(src="img/figures/figure-14.png" alt="")
+		+scroll('SCROLL TO EXPLORE', 'description')
+	// description
+	.section.description
+		.details__anchor.anchor#description
+		.description__container.container
+			.description__list
+				.description__item
+					.description__wrap
+						.description__content.content
+							h2 Scaling solutions, amplified.
+							p Onix is committed to fostering the growth of Web3 applications by providing the infrastructure and security needed for Web3.
+							p Onix believes in Web3 for all. Onix is a decentralised blockchain scaling platform that enables developers.
+						.description__blockquote
+							.description__comment.h3 “It’s not just that is fast, the scalability and ease of use is simply unparalleled, truly mindblowing”
+							.description__author
+								.description__avatar
+									img(src="img/avatar-1.jpg" alt="")
+								.description__details
+									.description__name Markus Freeman
+									.description__position Dev Ops - Azious
+					.description__preview
+						.description__inner
+							img(src="img/technology-pic-1.png" alt="")
+							svg(width="0" height="0" style="display: block")
+								clipPath(id="polygonImage" clipPathUnits="objectBoundingBox")
+									path(d="M0 0h.838c.017 0 .033.004.045.01l.05.028.047.026c.013.007.02.017.02.027V1H0V0z")
+						.description__square(style="background: #E87A95;")
+				.description__item
+					.description__wrap
+						.description__content.content
+							h2 Resilient, automated layer security
+							p Empower your blockchain security without sacrificing crucial resources and accessibility to its members.
+							ul
+								li Fully benefit from scalable network effects
+								li Inherently more secure than all competitors
+								li More open and powerful with 0.001% downtime
+					.description__preview
+						.description__inner
+							img(src="img/technology-pic-1.png" alt="")
+						.description__square(style="background: #EBB15B;")
+		.description__image.js-parallax(data-speed="1.5")
+			img(src="img/figures/figure-9.png" alt="")
+	// extension
+	.section.extension
+		.extension__container.container
+			.extension__head
+				h2.extension__title.h2 Onix makes blockchain development accessible for everyone.
+				.extension__info Onix&apos;s complete suite of blockchain-scaling solutions.
+			.extension__list
+				mixin extensionCard(image, title, content, color)
+					// card
+					a.extension__card.card(href="blog-details.html" data-aos="fadeInDown" data-aos-duration="800")
+						+cardStyle(color)
+						.card__inner
+							.extension__subtitle.h3=title
+							.extension__content=content
+							.extension__preview
+								.extension__inner
+									img(src=image alt="")
+							.extension__foot
+								.extension__more(style='color:' + color) Learn more
+								+i('arrow-right')
+				+extensionCard("img/development-pic-3.png", "Globally-accesible, transformational API", "Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes.", "#6F5BEB")
+				+extensionCard("img/development-pic-2.png", "Resilient, automated layer security", "Empower your blockchain security without sacrificing crucial resources and accessibility to its members.", "#89EB5B")
+				+extensionCard("img/development-pic-5.png", "Seamless connection to any API tools", "Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes.", "#E87A95")
+				+extensionCard("img/development-pic-1.png", "Reliable, tamper-proof network", "Use cryptographic proofs to connect highly accurate and available data/APIs to any smart contract.", "#EBB15B")
+		.extension__images
+			.extension__image.js-parallax(data-speed="1.5")
+				img(src="img/figures/figure-7.png" alt="")
+			.extension__image.js-parallax(data-speed="-1.5")
+				img(src="img/figures/figure-9.png" alt="")
+			.extension__image.js-parallax(data-speed="1.6")
+				img(src="img/figures/figure-1.png" alt="")
+	// community
+	.section.community
+		.community__container.container.container_large
+			.community__wrap
+				.community__row
+					.community__details
+						h2.community__title.h2 Onix community
+						.community__info Stay current on the latest Onix project.
+					+socials("socials_dark socials_large")
+			.community__list
+				.community__item
+					.community__value.h2 $110M
+					.community__content Stay current on the latest Onix project developments, news, and content, updated daily.
+				.community__item
+					.community__value.h2 90M+
+					.community__content Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.
+				.community__item
+					.community__value.h2 220K+
+					.community__content Stay current on the latest Onix project developments, news, and content, updated daily.
+	// spec
+	.section.spec
+		.spec__container.container
+			.spec__row
+				.spec__wrap
+					.spec__title.h2 Stay up to date on everything
+					.spec__info Stay current on the latest Onix project developments, news, and content, updated daily.
+					.spec__list
+						.spec__item
+							.spec__number.h3 01
+							.spec__content Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes.
+						.spec__item
+							.spec__number.h3 02
+							.spec__content Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes.
+					.spec__line
+						button.button.spec__button
+							span launch app
+						button.spec__document Read the docs
+				.spec__preview
+					img(src="img/about-pic-2.png" alt="")
+	// press
+	.section.press
+		.press__container.container
+			.press__col
+				h2.press__title.h2 Your gateway to everything Onix.
+				.press__content Stay current on the latest Onix project developments, news, and content, updated daily.
+				.press__image
+					img(src="img/about-pic-3.png" alt="")
+			.press__col
+				.press__list
+					mixin pressCard(title, date, classStatus, status, color, small)
+						// card
+						a.press__card.card.card_small(href="blog-details.html" data-aos="fadeInDown" data-aos-duration="800")
+							+cardStyle(color, small)
+							.card__inner
+								div(class=classStatus)=status
+								.press__info.h4=title
+								.press__line
+									.press__date=date
+									+i('arrow-right')
+					+pressCard("Everything Onix weekly report", "08/11/2022", "status-pink press__status", "UPDATES", "#EB5BE5", true)
+					+pressCard("Everything Onix weekly report", "08/11/2022", "status-purple press__status", "UPDATES", "#6F5BEB", true)
+					+pressCard("Everything Onix weekly report", "08/11/2022", "status-green press__status", "NEW RELEASE", "#89EB5B", true)
+	// faq
+	.section.faq
+		.faq__container.container
+			h2.faq__title.h2 Your questions, answered
+			.faq__list
+				mixin faqItem(idMask, title)
+					.faq__item
+						.faq__head
+							.faq__subtitle.h4=title 
+							.faq__plus
+								.faq__inner
+								svg(xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40")
+									mask(id=idMask fill="#fff")
+										path(d="M12.799.586A2 2 0 0 1 14.213 0H38a2 2 0 0 1 2 2v36a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V14.213a2 2 0 0 1 .586-1.414L12.799.586z")
+									path(d="M.586 12.799l-1.414-1.414 1.414 1.414zM38 2H14.213v-4H38v4zm0 36V2h4v36h-4zM2 38h36v4H2v-4zm0-23.787V38h-4V14.213h4zm-2.828-2.828L11.385-.828 14.213 2 2 14.213-.828 11.385zM-2 14.213a4 4 0 0 1 1.172-2.828L2 14.213h-4zM2 42a4 4 0 0 1-4-4h4v4zm40-4a4 4 0 0 1-4 4v-4h0 4zM14.213 2h0L11.385-.828A4 4 0 0 1 14.213-2v4zM38-2a4 4 0 0 1 4 4h-4 0v-4z" fill="#5e6b7e" mask='url(#' + idMask + ')')
+						.faq__body Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.
+				+faqItem("mask1", "Who can join the project?")
+				+faqItem("mask2", "What is On-point service")
+				+faqItem("mask3", "What is UI8")
+	include includes/reviews
+	include includes/join
+
+
+
+
+

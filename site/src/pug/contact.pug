@@ -1,0 +1,67 @@
+---
+title: Onix
+headerLinkContact: active
+---
+extends layouts/layout
+block content
+	// contact
+	.section.contact
+		.section.contact__main
+			.contact__container.container
+				.contact__wrap
+					.contact__stage Contact us
+					h1.contact__title.h1 Let’s chat
+					.contact__info Onix delivers tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain
+					+scroll('WRITE SOMETHING', 'form', 'scroll_row')
+			.contact__images
+				.contact__image
+					img(src="img/lines-1.svg" alt="")
+				.contact__image.js-parallax(data-speed="-1.4")
+					img(src="img/figures/figure-3.png" alt="")
+		.contact__wrapper
+			.contact__anchor.anchor#form
+			.contact__container.container
+				.contact__row
+					.contact__col
+						form.contact__form
+							.contact__subtitle.h3 Need some help?
+							.contact__fieldset
+								.field
+									.field__wrap
+										input.field__input(type="text" name="name" placeholder="Name" required)
+								.field
+									.field__wrap
+										input.field__input(type="email" name="email" placeholder="Email" required)
+								.field.field_textarea
+									.field__wrap
+										textarea.field__textarea(name="message" placeholder="Tell us about your concern" required)
+							button.button.contact__button(type="submit")
+								span contact us
+					.contact__col
+						.contact__item
+							.contact__category Support
+							a.contact__content.h5(href="mailto:hello@ui8.net") hello@ui8.net
+						.contact__line
+							.contact__item
+								.contact__category Address 1
+								.contact__content.h5
+									p 4955 Serenity Unions
+									p Oregon
+									p Cambridgeshire
+							.contact__item
+								.contact__category Address 2
+								.contact__content.h5
+									p 4955 Serenity Unions
+									p Oregon
+									p Cambridgeshire
+						.contact__item
+							.contact__category Phone number
+							a.contact__content.h5(href="tel:+44987456321") +44 987 456 321
+						+socials
+	include includes/reviews
+	include includes/join
+
+
+
+
+

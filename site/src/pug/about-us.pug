@@ -1,0 +1,120 @@
+---
+title: Onix
+headerLinkAbout: active
+---
+extends layouts/layout
+block content
+	// about
+	.section.about
+		.about__container.container
+			.about__wrap
+				.about__stage about us
+				h1.about__title.h1 Onix Fintech
+				.about__info Onix delivers tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain
+				+scroll('SCROLL TO EXPLORE', 'details', 'scroll_row')
+		.about__images
+			.about__image
+				img(src="img/lines-1.svg" alt="")
+			.about__image.js-parallax(data-speed="-1.4")
+				img(src="img/figures/figure-3.png" alt="")
+	// details
+	.section.details
+		.details__anchor.anchor#details
+		.details__container.container
+			.details__box
+				.details__counter 1M
+				.details__info.h4 Onix’s users
+			.details__wrap
+				.details__content.content
+					h2 Scaling solutions, amplified.
+					h3 Built by developers, for developers.
+					p Onix is committed to fostering the growth of Web3 applications by providing the infrastructure and security needed for Web3.
+					p Onix believes in Web3 for all. Onix is a decentralised blockchain scaling platform that enables developers to build scalable user-friendly dApps with low transaction fees without ever sacrificing on security.
+				a.button.details__button(href="contact.html")
+					span contact us
+		.details__image.js-parallax(data-speed="1.5")
+			img(src="img/figures/figure-7.png" alt="")
+	// testimonial
+	.section.testimonial
+		.testimonial__container.container
+			.testimonial__list
+				.testimonial__item
+					.testimonial__subtitle.h3 Built by developers, for developers.
+					.testimonial__content Stay current on the latest Onix project developments, news, and content, updated daily.
+				.testimonial__item
+					.testimonial__subtitle.h3 Built by developers, for developers.
+					.testimonial__content Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.
+				.testimonial__item
+					.testimonial__subtitle.h3 Scaling solutions, amplified.
+					.testimonial__content Stay current on the latest Onix project developments, news, and content, updated daily.
+			.testimonial__comment
+				.testimonial__details
+					.testimonial__title.h2 “Onix accelerated our development process tenfold all while maintaining security and integrity from production to post launch”
+					.testimonial__avatar
+						img(src="img/avatar-2.jpg" alt="")
+					.testimonial__author Becky Stal
+					.testimonial__position Sr. Engineer - FauxChain
+				.testimonial__images
+					.testimonial__image
+						img(src="img/lines-2.svg" alt="")
+					.testimonial__image.js-parallax(data-speed="-1.4")
+						img(src="img/figures/figure-6.png" alt="")
+					.testimonial__image.js-parallax(data-speed="-1.4")
+						img(src="img/figures/figure-1.png" alt="")
+	// team
+	.section.team
+		.team__container.container
+			.team__head
+				.team__subtitle.h3 Meet the Onix team
+				.team__title.h2 Built by developers, for&nbsp;developers.
+			.team__list
+				mixin teamItem(image, name, position, color, delay)
+					.team__item(data-aos="fadeInDown" data-aos-duration="800" data-aos-delay=delay)
+						.team__square(style='background:' + color)
+						.team__photo
+							.team__inner
+								img(src=image alt="")
+						.team__details
+							.team__name.h4=name
+							.team__position=position
+				+teamItem("img/team/photo-1.png", "Richie Larson", "Sr. Engineer - FauxChain", "#89EB5B", 0)
+				+teamItem("img/team/photo-2.png", "Richie Larson", "Sr. Engineer - FauxChain", "#EBB15B", 200)
+				+teamItem("img/team/photo-3.png", "Richie Larson", "Sr. Engineer - FauxChain", "#89EB5B", 400)
+				+teamItem("img/team/photo-4.png", "Richie Larson", "Sr. Engineer - FauxChain", "#89EB5B", 0)
+				+teamItem("img/team/photo-5.png", "Richie Larson", "Sr. Engineer - FauxChain", "#89EB5B", 200)
+				+teamItem("img/team/photo-6.png", "Richie Larson", "Sr. Engineer - FauxChain", "#89EB5B", 400)
+				+teamItem("img/team/photo-7.png", "Richie Larson", "Sr. Engineer - FauxChain", "#89EB5B", 0)
+				+teamItem("img/team/photo-8.png", "Richie Larson", "Sr. Engineer - FauxChain", "#89EB5B", 200)
+				+teamItem("img/team/photo-9.png", "Richie Larson", "Sr. Engineer - FauxChain", "#89EB5B", 400)
+			svg(width="0" height="0" style="display: block")
+				clipPath(id="polygonPhoto" clipPathUnits="objectBoundingBox")
+					path(d="M1 1V.215C1 .196.993.177.98.162L.851.023C.838.008.819 0 .8 0H0v1")
+	// values
+	.section.values
+		.values__container.container
+			.values__row
+				.values__col
+					.values__subtitle.h3 Our values
+					.values__title.h2 Next-gen for&nbsp;top blockchain
+					.values__content Onix believes in Web3 for all. Onix is a decentralised blockchain scaling platform that enables developers to build scalable user-friendly dApps with low transaction fees without ever sacrificing on security.
+					button.button.values__button
+						span launch app
+				.values__col
+					.values__list
+						mixin valuesCard(title, classStatus, status, color, small)
+							// card
+							.values__card.card.card_small(data-aos="fadeInDown" data-aos-duration="800")
+								+cardStyle(color, small)
+								.card__inner
+									div(class=classStatus style='color:' + color)=status
+									.values__info.h4=title
+						+valuesCard("Everything Onix weekly report", "status-pink values__status", "TAG LINE", "#EB5BE5", true)
+						+valuesCard("Everything Onix weekly report", "status-purple values__status", "TAG LINE", "#6F5BEB", true)
+						+valuesCard("Everything Onix weekly report", "status-green values__status", "TAG LINE", "#89EB5B", true)
+	include includes/reviews
+	include includes/join
+
+
+
+
+

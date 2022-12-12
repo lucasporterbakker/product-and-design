@@ -1,0 +1,133 @@
+.description
+    position: relative
+    +m
+        margin-bottom: 66px
+    &__item
+        display: flex
+        justify-content: space-between
+        +t
+            display: block
+        &:nth-child(2n+1)
+            align-items: center
+            .description__wrap
+                padding-right: 82px
+                +d
+                    padding-right: 46px
+                +t
+                    padding-right: 0
+        &:nth-child(2n)
+            flex-direction: row-reverse
+            .description__wrap
+                padding: 80px 0 0 82px
+                +w
+                    padding-left: 46px
+                +t
+                    padding: 0
+        &:not(:last-child)
+            margin-bottom: 180px
+            +d
+                margin-bottom: 120px
+            +m
+                margin-bottom: 96px
+    &__wrap
+        flex-grow: 1
+    &__content
+        h2
+            margin-bottom: 32px
+    &__blockquote
+        margin-top: 80px
+    &__preview
+        position: relative
+        flex-shrink: 0
+        width: 497px
+        margin-bottom: 24px
+        box-shadow: 0px 32px 38px -10px rgba(0, 0, 0, 0.25)
+        font-size: 0
+        +t
+            margin: 72px auto 0
+        +m
+            max-width: 450px
+            width: auto
+            margin-top: 32px
+        &:before
+            content: ""
+            position: absolute
+            left: 24px
+            right: 24px
+            bottom: -24px
+            z-index: -1
+            height: 120px
+            border-radius: 24px
+            background: rgba($n6, .5)
+            +m
+                left: 16px
+                right: 16px
+                bottom: -16px
+    &__inner
+        position: relative
+        z-index: 1
+        background: $n6
+        clip-path: url(#polygonImage)
+        border-radius: 32px
+        +m
+            border-radius: 20px
+    &__square
+        position: absolute
+        top: 8px
+        right: 8px
+        width: 80px
+        height: 80px
+        border-radius: 24px
+        +m
+            top: 5px
+            right: 5px
+            border-radius: 16px
+    &__blockquote
+        position: relative
+        padding-left: 58px
+        +m
+            padding-left: 24px
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            width: 2px
+            border-radius: 1px
+            background: $c1s1
+    &__comment
+        margin-bottom: 24px
+        line-height: 42px
+    &__author
+        display: flex
+        align-items: center
+    &__avatar
+        position: relative
+        flex-shrink: 0
+        width: 64px
+        height: 64px
+        margin-right: 16px
+        border-radius: 50%
+        overflow: hidden
+        img
+            border-radius: 50%
+    &__name
+        margin-bottom: 4px
+        +baseB
+    &__position
+        +base
+        color: $n5
+    &__image
+        position: absolute
+        right: calc(50% - 577px)
+        bottom: -250px
+        width: 527px
+        +w
+            right: -180px
+        +d
+            right: -350px
+        +t
+            display: none
+        img
+            width: 100%

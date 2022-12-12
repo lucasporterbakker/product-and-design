@@ -1,0 +1,19 @@
+// reviews
+.reviews
+	.reviews__container.container
+		.reviews__list
+			mixin reviewsItem(avatar, author, position, content, delay)
+				.reviews__item(data-aos="fadeInDown" data-aos-duration="800" data-aos-delay=delay)
+					.reviews__content "
+						=content
+						| "
+					.reviews__line
+						.reviews__avatar
+							img(src=avatar alt="")
+						.reviews__details
+							.reviews__author=author
+							.reviews__position=position
+			+reviewsItem("img/avatar-1.jpg", "Markus Freeman", "Dev Ops - Azious", "It’s not just that is fast, the scalability and ease of use is simply unparalleled, truly mindblowing", 0)
+			+reviewsItem("img/avatar-2.jpg", "Becky Stal", "Sr. Engineer - FauxChain", "Onix accelerated our development process tenfold all while maintaining security and integrity from production to post launch", 200)
+			+reviewsItem("img/avatar-3.jpg", "Ethan Jordan", "Blockchain Analyst - Enzotech", "If you’re not building on Onix you’re wasting time and vital resources that could be allocated to other parts of your project", 400)
+

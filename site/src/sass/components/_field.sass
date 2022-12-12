@@ -1,0 +1,25 @@
+.field
+    &__wrap
+        position: relative
+    &__input,
+    &__textarea
+        width: 100%
+        border: 2px solid transparent
+        background: $n9
+        border-radius: 8px
+        +base
+        color: $n1
+        transition: background .2s, border-color .2s
+        &::placeholder
+            color: $n3
+        &:focus
+            border-color: $n5
+    &__input
+        height: 52px
+        padding: 0 14px
+    &__textarea
+        height: 204px
+        padding: 12px 14px
+        resize: none
+    &_textarea
+        font-size: 0

@@ -1,0 +1,96 @@
+.development
+    position: relative
+    &__container
+        padding: 0
+    &__title
+        max-width: 1280px
+        margin: 0 auto
+        padding: 0 40px
+        text-align: center
+        +w
+            max-width: 100%
+            text-align: left
+        +m
+            padding: 0 24px
+    &__list
+        display: flex
+        padding: 180px 0 40px
+        overflow: auto
+        -webkit-overflow-scrolling: touch
+        +m
+            padding: 120px 0 40px
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            display: block
+            width: 80px
+            +w
+                width: 40px
+            +m
+                width: 24px
+        &::-webkit-scrollbar
+            height: 8px
+        &::-webkit-scrollbar-track
+            margin: 0 80px
+            background-color: $n9
+            border: 2px solid $n9
+            border-radius: 4px
+            +w
+                margin: 0 40px
+            +m
+                margin: 0 24px
+        &::-webkit-scrollbar-thumb
+            background-color: $n7
+            border: 2px solid $n9
+            border-radius: 4px
+    &__card
+        flex-shrink: 0
+        width: 420px
+        padding: 0 40px 40px
+        +m
+            width: 310px
+        &:hover
+            .development__arrow svg
+                fill: $n2
+        &:not(:last-child)
+            margin-right: 40px
+            +m
+                margin-right: 16px
+    &__preview
+        position: relative
+        margin: -50% 0 -45px
+        pointer-events: none
+        +m
+            margin: -70% -48px -36px
+        &:before
+            content: ""
+            display: block
+            padding-bottom: 100%
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__subtitle
+        margin-bottom: 16px
+        word-break: break-all
+    &__content
+        margin-bottom: 54px
+    &__foot
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: auto
+    &__arrow
+        font-size: 0
+        svg
+            width: 26px
+            height: 26px
+            fill: $n5
+            transition: fill .3s
+    &__more
+        +text-button
+
